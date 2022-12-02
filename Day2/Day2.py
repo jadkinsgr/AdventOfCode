@@ -32,5 +32,5 @@ for round in data:
     part_two_result += part_two[round]
 
 # Answers
-print("Answer to part 1: ", part_one_result)
-print("Answer to part 2: ", part_two_result)
+print(f"The answer to Part 1: {part_one_result}")
+print(f"The answer to Part 1: {part_two_result}")
