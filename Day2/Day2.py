@@ -21,7 +21,6 @@ for round in data:
 # part two
 # Changed the values of the outcomes depending on the rules
 # X = LOSS, Y = DRAW, Z = WIN
-# (got values looking at table above)
 part_two = {
     "AX": 3, "AY": 4, "AZ": 8,
     "BX": 1, "BY": 5, "BZ": 9,
