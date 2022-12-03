@@ -1,27 +1,13 @@
 #Build function to pull in the data 
-def get_input(file_name):
-#special encoding for my sensitive mac 
-    with open(file_name,  encoding='utf-8-sig') as f:
-        data = [item.splitlines() for item in f.read().split('\n\n')]
+with open('input.in',  encoding='utf-8-sig') as f:
+    data = [item.splitlines() for item in f.read().split('\n\n')]
     data = [[int(calorie) for calorie in item] for item in data]
-    return data
 
-#build part one, which is to get the sum of all values per item and show the top value
-def part_one(data):
-    maximum = max([sum(item) for item in data])
-    return maximum
+#print(data)
 
-#build part two which is to sort the top values in reverse order and then sum up the top 3
-def part_two(data):
-    return sum(sorted([sum(item) for item in data], reverse=True)[:3])
+p1 = max([sum(item) for item in data])
 
-#pulling it
-def main():
-    file_name = r'data.txt'
-    data = get_input(file_name)
-    print(f"Advent Part One Answer: {part_one(data)}")
-    print(f"Advent Part Two Answer: {part_two(data)}")
+p2 = sum(sorted([sum(item) for item in data], reverse=True)[:3])
 
-
-if __name__ == "__main__":
-    main()
+print(f"Advent Part One Answer: {p1}")
+print(f"Advent Part Two Answer: {p2}")
